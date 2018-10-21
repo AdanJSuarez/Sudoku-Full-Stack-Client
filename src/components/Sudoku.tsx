@@ -19,6 +19,7 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
     //     fontSize: 14,
     //     fontStyle: 'bold',
     // }
+    private static url: string = 'http://127.0.0.1:8080/sudoku/board';
     constructor(props: ISudokuProps) {
         super(props);
         this.state = {
@@ -29,21 +30,31 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
     }
     public render() {
         return (
-            <div>
+            <div className="sudoku-numbers">
                 <h3>{ this.state.name }</h3>
                 <h3>{ this.state.currentSudokuNumbers }</h3>
+                <button onClick={this.handleClic}> Reload </button>
             </div>
         
         );
     }
-    private fetchSudoku() { // FIXME: fetch is not working because the server reject the request.
-        fetch('http://127.0.0.1:8080/sudoku/board')  
+    //Arrow function to bind this.xxx to class scope
+    private handleClic = (e: React.MouseEvent<HTMLButtonElement>) => {
+        this.fetchSudoku(); 
+    }
+    private fetchSudoku = () => {
+        fetch(SudokuComponent.url, {
+                method: 'GET',
+                headers:{
+                'Content-Type': 'application/json',
+                }
+            })
             .then((res) => res.json())
             .then((resJson) => {
-                this.state = {
+                this.setState({
                     currentSudokuNumbers: resJson.numbers,
                     name: resJson.name
-                }
+                });
                 console.log(resJson)
             })
             .catch((err)=>{
@@ -51,8 +62,5 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
                 console.error(err);
             })
             
-    };
-    // private handleClick(){
-    //     this.setState({currentSudokuNumbers: this.props.sudokuNumbers})
-    // }
-}
+        };
+    }
