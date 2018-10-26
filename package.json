@@ -12,7 +12,8 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "superstart": "npm install && react-scripts-ts build && node serverweb.js"
   },
   "devDependencies": {
     "@types/jest": "^23.3.5",
