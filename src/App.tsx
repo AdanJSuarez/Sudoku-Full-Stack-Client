@@ -1,3 +1,9 @@
+/** 
+ * Adan J. Suarez
+ * adanjsuarez@gmail.com
+ * Full Stack Home-Project 
+ */
+
 import * as React from 'react';
 import './css/App.css';
 import SudokuComponent from './components/Sudoku';
