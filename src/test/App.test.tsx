@@ -18,6 +18,7 @@ describe("Test suit for App", () => {
         ReactDOM.render(<App />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
+    // FIXME: It is a dummy test copy/pasted from some webpage.
     it('Should to sent a RESTapi get to server', () => {
         server.respondWith("GET", "/some/article/comments.json",
             [200, { "Content-Type": "application/json" },

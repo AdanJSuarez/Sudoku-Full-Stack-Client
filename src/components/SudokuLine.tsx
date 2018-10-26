@@ -1,3 +1,9 @@
+/** 
+ * Adan J. Suarez
+ * adanjsuarez@gmail.com
+ * Full Stack Home-Project 
+ */
+
 import * as React from 'react';
 import SudokuElementComponent from './SudokuElement';
 
@@ -61,6 +67,11 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
             </div>
         );
     }
+    /**
+     *Take the Json object bubbled up
+     * @param {*} element
+     * @memberof SudokuLineComponent
+     */
     public toggleNumber(element: any) {
       this.props.toggledNumber(element);
     }

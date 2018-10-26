@@ -1,6 +1,11 @@
+/** 
+ * Adan J. Suarez
+ * adanjsuarez@gmail.com
+ * Full Stack Home-Project 
+ */
 
 .Image-spinning {
-    height: 50px;
+    height: 39px;
     opacity: 0.6;
     animation: zen-spinning infinite 500ms linear;
 }

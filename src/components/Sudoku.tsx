@@ -40,7 +40,6 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
         this.toggleNumber = this.toggleNumber.bind(this);
     }
     public render() {
-
         return  (
             <div className="sudoku-numbers">
                 { <SudokuLineComponent row={1} dataLine={this.state.dataLine1} toggledNumber={this.toggleNumber}/> }
@@ -53,14 +52,27 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
                 { <SudokuLineComponent row={8} dataLine={this.state.dataLine8} toggledNumber={this.toggleNumber}/> }    
                 { <SudokuLineComponent row={9} dataLine={this.state.dataLine9} toggledNumber={this.toggleNumber}/> }    
             </div>
-            )
+        )
     }
+    /**
+     * Return an array with sudoku number of the desired line 
+     * @private
+     * @param {number} num
+     * @returns {number[]}
+     * @memberof SudokuComponent
+     */
     private getRow(num:number): number[]{
         let begin = (num - 1) * 9;
         let end = begin + 9;
         let result = this.props.sudokuNumbers.slice(begin, end);
         return result;
     }
+    /**
+     * Take the Json object bubbled up
+     * @private
+     * @param {*} element
+     * @memberof SudokuComponent
+     */
     private toggleNumber(element: any){
         this.props.toggledNumber(element);
     }
