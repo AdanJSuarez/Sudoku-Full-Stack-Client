@@ -2,13 +2,14 @@ import * as React from 'react';
 import SudokuElementComponent from './SudokuElement';
 
 export interface ISudokuLineProps {
-    lineNumber: number;
+    row: number;
     dataLine: number[];
     toggledNumber: any;
 }
 
 export interface ISudokuLineState {
-    currentLineNumber  : number;
+    currentRow  : number;
+    currentToggleNumbers: any[];
     currentDataElement1: number;
     currentDataElement2: number;
     currentDataElement3: number;
@@ -24,7 +25,8 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
     constructor(props: ISudokuLineProps) {
         super(props);
         this.state = {
-            currentLineNumber: props.lineNumber,
+            currentRow: props.row,
+            currentToggleNumbers: [],
             currentDataElement1: props.dataLine[0],
             currentDataElement2: props.dataLine[1],
             currentDataElement3: props.dataLine[2],
@@ -35,28 +37,31 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
             currentDataElement8: props.dataLine[7],
             currentDataElement9: props.dataLine[8],
         };
+        this.toggleNumber = this.toggleNumber.bind(this);
     }
 
     public render() {
         return (
-            <div className = 'Line'>
+            <div className = 'Table-Line'>
                 <table className='Table'>
+                <tbody>
                     <tr>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement1} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement2} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement3} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement4} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement5} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement6} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement7} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement8} /> } </td>
-                        <td className= 'td'> { <SudokuElementComponent lineNumber={this.props.lineNumber} dataElement={this.state.currentDataElement9} /> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={1} dataElement={this.state.currentDataElement1} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={2} dataElement={this.state.currentDataElement2} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={3} dataElement={this.state.currentDataElement3} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={4} dataElement={this.state.currentDataElement4} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={5} dataElement={this.state.currentDataElement5} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={6} dataElement={this.state.currentDataElement6} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={7} dataElement={this.state.currentDataElement7} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={8} dataElement={this.state.currentDataElement8} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={9} dataElement={this.state.currentDataElement9} toggleNumber={this.toggleNumber}/> } </td>
                     </tr>
+                </tbody>
                 </table>
             </div>
         );
     }
-    public addElementToFixNumbers(element: SudokuElementComponent) {
-
+    public toggleNumber(element: any) {
+      this.props.toggledNumber(element);
     }
 }

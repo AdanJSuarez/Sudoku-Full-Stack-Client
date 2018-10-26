@@ -8,7 +8,7 @@ import SudokuLineComponent from './SudokuLine';
 
 export interface ISudokuProps {
     sudokuNumbers: number[];
-    toggledNumbers: any;
+    toggledNumber: any;
 }
 export interface ISudokuState {
     dataLine1: number[],
@@ -37,20 +37,21 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
             dataLine9:this.getRow(9), 
             };
         this.getRow = this.getRow.bind(this);
+        this.toggleNumber = this.toggleNumber.bind(this);
     }
     public render() {
 
         return  (
             <div className="sudoku-numbers">
-                <p>{ <SudokuLineComponent lineNumber={1} dataLine={this.state.dataLine1} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={2} dataLine={this.state.dataLine2} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={3} dataLine={this.state.dataLine3} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={4} dataLine={this.state.dataLine4} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={5} dataLine={this.state.dataLine5} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={6} dataLine={this.state.dataLine6} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={7} dataLine={this.state.dataLine7} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={8} dataLine={this.state.dataLine8} toggledNumber={1}/> }</p>
-                <p>{ <SudokuLineComponent lineNumber={9} dataLine={this.state.dataLine9} toggledNumber={1}/> }</p>
+                { <SudokuLineComponent row={1} dataLine={this.state.dataLine1} toggledNumber={this.toggleNumber}/> }
+                { <SudokuLineComponent row={2} dataLine={this.state.dataLine2} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={3} dataLine={this.state.dataLine3} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={4} dataLine={this.state.dataLine4} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={5} dataLine={this.state.dataLine5} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={6} dataLine={this.state.dataLine6} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={7} dataLine={this.state.dataLine7} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={8} dataLine={this.state.dataLine8} toggledNumber={this.toggleNumber}/> }    
+                { <SudokuLineComponent row={9} dataLine={this.state.dataLine9} toggledNumber={this.toggleNumber}/> }    
             </div>
             )
     }
@@ -59,5 +60,8 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
         let end = begin + 9;
         let result = this.props.sudokuNumbers.slice(begin, end);
         return result;
+    }
+    private toggleNumber(element: any){
+        this.props.toggledNumber(element);
     }
 }
