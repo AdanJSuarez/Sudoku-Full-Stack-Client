@@ -46,6 +46,12 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
             </div>
             )
     }
+    /**
+     * Reaload a new sudoku after click
+     * @private
+     * @param {React.MouseEvent<HTMLButtonElement>} e
+     * @memberof App
+     */
     private handleClick(e: React.MouseEvent<HTMLButtonElement>) {
         // Delete sudoku numbers to let zenImage shows up
         this.resetStateNumbers();
