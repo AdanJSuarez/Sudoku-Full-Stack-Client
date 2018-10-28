@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suit for App render correctly render 1`] = `
+<div
+  class="App-div"
+>
+  <h2
+    class="Name"
+  >
+    SUDOKU
+  </h2>
+  <img
+    alt="Spinning image"
+    class="Image-spinning"
+  >
+    
+  </img>
+</div>
+`;
+
+exports[`Test suit for App render correctly shallow 1`] = `
+<div
+  className="App-div"
+>
+  <h2
+    className="Name"
+  >
+    SUDOKU
+  </h2>
+  <img
+    alt="Spinning image"
+    className="Image-spinning"
+  />
+</div>
+`;

@@ -61,8 +61,6 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @memberof App
      */
     private handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-        // Delete sudoku numbers to let zenImage shows up
-        // this.resetStateNumbers();
         this.setState({loading:true});
         if (this.selectedNumber !== 0) {
             this.postNumber();
