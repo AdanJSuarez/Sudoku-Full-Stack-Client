@@ -34,6 +34,7 @@ describe("Test suit for App", ()=>{
         expect(wrapper).toMatchSnapshot();
     });
     it('render after update state has to include sudoku numbers', ()=>{
-
+        // TODO: Previos tries didn't work. I need to see why
     });
+    //TODO: It needs many more test!!
 })
