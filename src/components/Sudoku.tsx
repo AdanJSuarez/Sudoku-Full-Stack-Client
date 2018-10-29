@@ -55,7 +55,7 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
         )
     }
     /**
-     * Return an array with sudoku number of the desired line 
+     * Return an array with sudoku numbers of the desired line 
      * @private
      * @param {number} num
      * @returns {number[]}

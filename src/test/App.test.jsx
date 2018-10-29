@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import App from '../App';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
-import { expect } from 'chai';
+//import { expect } from 'chai';
 import SudokuComponent from '../components/Sudoku';
 
 //Set the default serializer for jest to be from enzyme-to-json
@@ -29,12 +29,11 @@ describe("Test suit for App", ()=>{
         );
         expect(wrapper).toMatchSnapshot();
     });
-    it('simulates click events', () => {
-        const wrapper = render(<App />);
-        wrapper.setState({loading: false});
-        expect(wrapper.contains(<SudokuComponent sudokuNumbers={[]} toggledNumber={[]}/>)).toEqual(true);
-        setTimeout(()=>{
-            
-        }, 1);
+    it('render correctly mount', () => {
+        const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it('render after update state has to include sudoku numbers', ()=>{
+
     });
 })
