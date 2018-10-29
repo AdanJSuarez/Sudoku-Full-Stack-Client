@@ -63,7 +63,7 @@ There is a Dockerfile with the specification to build the docker image and nginx
 
 ### Build
 
-We assume nodejs had been install previously, if not we need to do it.
+We assume nodejs and docker had been install previously, if not we need to do it.
 
 You just need to type: ./npm run dockerbuild
 
