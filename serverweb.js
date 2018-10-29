@@ -11,8 +11,8 @@ const app = express();
 console.log('---Server running at localhost:9000---')
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/sudoku/board', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(9000);
+app.listen(9000, "0.0.0.0");

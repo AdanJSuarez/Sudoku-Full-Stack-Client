@@ -3,14 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/enzyme": "^3.1.14",
-    "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/react-test-renderer": "^16.0.3",
-    "@types/sinon": "^5.0.5",
-    "express": "^4.16.4",
+    "express":"^4.16.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts-ts": "3.1.0",
+    "serve": "^10.0.2",
     "sinon": "^7.1.0"
   },
   "scripts": {
@@ -21,6 +18,10 @@
     "superstart": "npm install && react-scripts-ts build && node serverweb.js"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/sinon": "^5.0.5",
     "@types/chai": "^4.1.7",
     "@types/chai-enzyme": "^0.6.5",
     "@types/jest": "^23.3.5",
