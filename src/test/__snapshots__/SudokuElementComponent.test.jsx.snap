@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suit for SudokuElementComponent render correctly mount 1`] = `
+<button
+  className="Element"
+  onClick={[Function]}
+>
+   
+  2
+   
+</button>
+`;
+
+exports[`Test suit for SudokuElementComponent render correctly render 1`] = `
+<button
+  class="Element"
+>
+   2 
+</button>
+`;
+
+exports[`Test suit for SudokuElementComponent render correctly shallow 1`] = `
+<button
+  className="Element"
+  onClick={[Function]}
+>
+   
+  2
+   
+</button>
+`;

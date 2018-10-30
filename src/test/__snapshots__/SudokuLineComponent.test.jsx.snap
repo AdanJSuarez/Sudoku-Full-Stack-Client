@@ -1,0 +1,379 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
+<div
+  className="Table-Line"
+>
+  <table
+    className="Table"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            2
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            5
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            8
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            7
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            4
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            3
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            9
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            6
+             
+          </button>
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <button
+            className="Element"
+            onClick={[Function]}
+          >
+             
+            1
+             
+          </button>
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
+<div
+  class="Table-Line"
+>
+  <table
+    class="Table"
+  >
+    <tbody>
+      <tr>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             2 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             5 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             8 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             7 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             4 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             3 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             9 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             6 
+          </button>
+           
+        </td>
+        <td
+          class="td"
+        >
+           
+          <button
+            class="Element"
+          >
+             1 
+          </button>
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Test suit for SudokuLineComponent render correctly shallow 1`] = `
+<div
+  className="Table-Line"
+>
+  <table
+    className="Table"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={1}
+            dataElement={2}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={2}
+            dataElement={5}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={3}
+            dataElement={8}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={4}
+            dataElement={7}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={5}
+            dataElement={4}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={6}
+            dataElement={3}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={7}
+            dataElement={9}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={8}
+            dataElement={6}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+        <td
+          className="td"
+        >
+           
+          <SudokuElementComponent
+            column={9}
+            dataElement={1}
+            row={1}
+            toggleNumber={[Function]}
+          />
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
