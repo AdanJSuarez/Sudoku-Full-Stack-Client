@@ -29,7 +29,7 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
     }
     public render() {
         return (
-            <button className={'Element' } onClick={this.hundleClick}> { this.state.currentDataElement } </button>
+            <button className={'Element'} onClick={this.hundleClick}> { this.state.currentDataElement } </button>
         );
     }
     /**

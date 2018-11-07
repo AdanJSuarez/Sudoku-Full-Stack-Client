@@ -1,9 +1,10 @@
 import React from 'react';
 import Enzyme, {shallow, render, mount} from 'enzyme';
-// import sinon from 'sinon';
+import sinon from 'sinon';
 import App from '../App';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
+import SudokuElementComponent from '../components/SudokuElement';
 //import { expect } from 'chai';
 // import SudokuComponent from '../components/Sudoku';
 
@@ -17,30 +18,55 @@ describe("Test suit for App", ()=>{
         3,9,7,1,4,8,2,1,8,2,3,5,4,7,9,6,7,9,4,8,6,2,1,5,3,4,1,7,6,8,5,3,2,9,9,3,6,
         1,2,7,5,4,8,8,2,5,4,3,9,6,1,7];
     
-    it('render correctly shallow', ()=>{
+    it('render correctly shallow without numbers', ()=>{
+        const wrapper = shallow(
+            <App sudokuNumbers={[]} />
+        );
+        expect(wrapper).toMatchSnapshot();
+    });
+    it('render correctly shallow with numbers', ()=>{
         const wrapper = shallow(
             <App sudokuNumbers={sudokuSolved} />
         );
         expect(wrapper).toMatchSnapshot();
     });
-    it('render correctly render', ()=>{
+    it('render correctly render without numbers', ()=>{
+        const wrapper = render(
+            <App sudokuNumbers={[]} />
+        );
+        expect(wrapper).toMatchSnapshot();
+    });
+    it('render correctly render with numbers', () => {
         const wrapper = render(
             <App sudokuNumbers={sudokuSolved} />
         );
         expect(wrapper).toMatchSnapshot();
     });
-    it('render correctly mount', () => {
+    it('render correctly mount without numbers', () => {
+        const wrapper = mount(<App sudokuNumbers={[]}/>);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('render correctly mount with numbers', () => {
         const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper).toMatchSnapshot();
     });
-    it('Check App states', ()=>{
-        const wrapper = shallow(
-            <App sudokuNumbers={sudokuSolved} />
-        );
-        expect(wrapper.state.currentSudokuNumbers).toBe(sudokuSolved)
+
+    it('Test App has a image when it has no sudoku numbers', () => {
+        const wrapper = mount(<App sudokuNumbers={[]} />);
+        expect(wrapper.find('img').hasClass('Image-spinning')).toBe(true);
     });
-    it('render after update state has to include sudoku numbers', ()=>{
-        // TODO: Previos tries didn't work. I need to see why
+    it('Test App has no image when it has no sudoku numbers and has a button', ()=>{
+        const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
+        expect(wrapper.hasClass('Reload-button')).toBe(false);
+        expect(wrapper.find('button').first().hasClass('Reload-button')).toBe(true);
     });
-    //TODO: It needs many more test!!
+    it('Test click on a number', () => {
+        // const spy = sinon.spy(this.toogleNumber());
+        // let wrapper = mount(<App sudokuNumbers={sudokuSolved} />);
+        // const elem = wrapper.contains(SudokuElementComponent);
+        // expect(elem).toBe(true);
+        // wrapper.find(SudokuElementComponent).first().simulate('click');
+        // expect(spy.calledOnce).toBe(true);
+    })
 })

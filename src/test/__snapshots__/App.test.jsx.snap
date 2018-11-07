@@ -1,6 +1,1270 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test suit for App render correctly mount 1`] = `
+exports[`Test suit for App render correctly mount with numbers 1`] = `
+<div
+  className="App-div"
+>
+  <h2
+    className="Name"
+  >
+    SUDOKU
+  </h2>
+  <button
+    className="Reload-button"
+    onClick={[Function]}
+  >
+     Reload 
+  </button>
+  <div
+    className="sudoku-numbers"
+  >
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Table-Line"
+    >
+      <table
+        className="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                8
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                2
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                5
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                4
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                3
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                9
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                6
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                1
+                 
+              </button>
+               
+            </td>
+            <td
+              className="td"
+            >
+               
+              <button
+                className="Element"
+                onClick={[Function]}
+              >
+                 
+                7
+                 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test suit for App render correctly mount without numbers 1`] = `
 <div
   className="App-div"
 >
@@ -16,7 +1280,1027 @@ exports[`Test suit for App render correctly mount 1`] = `
 </div>
 `;
 
-exports[`Test suit for App render correctly render 1`] = `
+exports[`Test suit for App render correctly render with numbers 1`] = `
+<div
+  class="App-div"
+>
+  <h2
+    class="Name"
+  >
+    SUDOKU
+  </h2>
+  <button
+    class="Reload-button"
+  >
+     Reload 
+  </button>
+  <div
+    class="sudoku-numbers"
+  >
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="Table-Line"
+    >
+      <table
+        class="Table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 8 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 2 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 5 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 4 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 3 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 9 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 6 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 1 
+              </button>
+               
+            </td>
+            <td
+              class="td"
+            >
+               
+              <button
+                class="Element"
+              >
+                 7 
+              </button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test suit for App render correctly render without numbers 1`] = `
 <div
   class="App-div"
 >
@@ -34,7 +2318,113 @@ exports[`Test suit for App render correctly render 1`] = `
 </div>
 `;
 
-exports[`Test suit for App render correctly shallow 1`] = `
+exports[`Test suit for App render correctly shallow with numbers 1`] = `
+<div
+  className="App-div"
+>
+  <h2
+    className="Name"
+  >
+    SUDOKU
+  </h2>
+  <button
+    className="Reload-button"
+    onClick={[Function]}
+  >
+     Reload 
+  </button>
+  <SudokuComponent
+    sudokuNumbers={
+      Array [
+        2,
+        5,
+        8,
+        7,
+        4,
+        3,
+        9,
+        6,
+        1,
+        6,
+        7,
+        1,
+        5,
+        9,
+        8,
+        2,
+        3,
+        4,
+        3,
+        4,
+        9,
+        2,
+        1,
+        6,
+        8,
+        7,
+        5,
+        5,
+        6,
+        3,
+        9,
+        7,
+        1,
+        4,
+        8,
+        2,
+        1,
+        8,
+        2,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        7,
+        9,
+        4,
+        8,
+        6,
+        2,
+        1,
+        5,
+        3,
+        4,
+        1,
+        7,
+        6,
+        8,
+        5,
+        3,
+        2,
+        9,
+        9,
+        3,
+        6,
+        1,
+        2,
+        7,
+        5,
+        4,
+        8,
+        8,
+        2,
+        5,
+        4,
+        3,
+        9,
+        6,
+        1,
+        7,
+      ]
+    }
+    toggledNumber={[Function]}
+  />
+</div>
+`;
+
+exports[`Test suit for App render correctly shallow without numbers 1`] = `
 <div
   className="App-div"
 >

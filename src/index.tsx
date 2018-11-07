@@ -4,7 +4,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <App />,
+    <App sudokuNumbers={[]}/>,
     document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

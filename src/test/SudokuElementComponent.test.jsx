@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme, {shallow, render, mount} from 'enzyme';
-// import sinon from 'sinon';
+import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
 //import { expect } from 'chai';
@@ -30,7 +30,10 @@ describe("Test suit for SudokuElementComponent", ()=>{
         expect(wrapper).toMatchSnapshot();
     });
     it('On click it should return the right number', ()=>{
-        
+        // const spy = sinon.spy();
+        // const wrapper = mount(<SudokuElementComponent row={1} row={1} colunm={1} dataElement={2} toggledNumber={{number:2, row:1, column:1}}/>);
+        // wrapper.simulate("click");
+        // expect(spy.calledOnce).toBe(true);
     })
     //TODO: It needs many more test!!
 })

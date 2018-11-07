@@ -9,9 +9,8 @@ import './css/App.css';
 import SudokuComponent from './components/Sudoku';
 import zenImage from './zenForLoading.png';
 
-
 interface ISudokuProps {
-  sudokuNumbers?: number[];
+  sudokuNumbers: number[];
 }
 
 interface ISudokuState {
@@ -21,24 +20,20 @@ interface ISudokuState {
 
 class App extends React.Component<ISudokuProps, ISudokuState> {
   
-    private static url: string = 'http://127.0.0.1:8080/sudoku/board';
-
+    private static URL: string = 'http://127.0.0.1:8080/sudoku/board';
     private selectedNumber: any;
     
     constructor (props: ISudokuProps){
         super(props);
+        this.bindingThis();
         this.state = {
-          currentSudokuNumbers: [],
-          loading: true
+          currentSudokuNumbers: props.sudokuNumbers,
+          loading: props.sudokuNumbers.length ? false:true,
         }
         this.selectedNumber = 0;
         this.getSudoku();
-        // Binding "this"
-        this.getSudoku = this.getSudoku.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-        this.toggledNumber = this.toggledNumber.bind(this);
-        this.postNumber = this.postNumber.bind(this);
     }
+
     public render() {
         // Conditional render to allow zenImage shows up
         return (!this.state.loading) ? (
@@ -53,6 +48,18 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
                 <img src = {zenImage} className='Image-spinning' alt="Spinning image"/>
             </div>
         )
+    }
+    /**
+     * Bind methods to 'this'
+     * @private
+     * @memberof App
+     */
+    private bindingThis() {
+        this.getSudoku = this.getSudoku.bind(this);
+        this.getSudoku = this.getSudoku.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.toggledNumber = this.toggledNumber.bind(this);
+        this.postNumber = this.postNumber.bind(this);
     }
     /**
      * Reaload a new sudoku after click
@@ -84,7 +91,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @memberof App
      */
     private getSudoku():void {
-        fetch(App.url, {
+        fetch(App.URL, {
                 method: 'GET',
         })
         .then((res) => res.json())
@@ -108,7 +115,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      */
     private postNumber():void {
         console.log('The selected number is:',this.selectedNumber)
-        fetch(App.url, {
+        fetch(App.URL, {
             method: 'POST',
             body: JSON.stringify(this.selectedNumber),
         })
