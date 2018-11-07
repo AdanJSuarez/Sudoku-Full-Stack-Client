@@ -33,6 +33,12 @@ describe("Test suit for App", ()=>{
         const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper).toMatchSnapshot();
     });
+    it('Check App states', ()=>{
+        const wrapper = shallow(
+            <App sudokuNumbers={sudokuSolved} />
+        );
+        expect(wrapper.state.currentSudokuNumbers).toBe(sudokuSolved)
+    });
     it('render after update state has to include sudoku numbers', ()=>{
         // TODO: Previos tries didn't work. I need to see why
     });

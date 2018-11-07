@@ -29,6 +29,8 @@ describe("Test suit for SudokuElementComponent", ()=>{
         const wrapper = mount(<SudokuElementComponent row={1} row={1} column={1} dataElement={2} toggledNumber={{number:2, row:1, column:1}}/>);
         expect(wrapper).toMatchSnapshot();
     });
-    
+    it('On click it should return the right number', ()=>{
+        
+    })
     //TODO: It needs many more test!!
 })
