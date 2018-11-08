@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import App from '../App';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
-import SudokuElementComponent from '../components/SudokuElement';
+import SudokuElementComponent from '../components/SudokuElementComponent';
 //import { expect } from 'chai';
 // import SudokuComponent from '../components/Sudoku';
 
@@ -45,28 +45,29 @@ describe("Test suit for App", ()=>{
     it('render correctly mount without numbers', () => {
         const wrapper = mount(<App sudokuNumbers={[]}/>);
         expect(wrapper).toMatchSnapshot();
+        wrapper.unmount();
     });
 
     it('render correctly mount with numbers', () => {
         const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper).toMatchSnapshot();
+        wrapper.unmount();
     });
 
     it('Test App has a image when it has no sudoku numbers', () => {
-        const wrapper = mount(<App sudokuNumbers={[]} />);
+        const wrapper = shallow(<App sudokuNumbers={[]} />);
         expect(wrapper.find('img').hasClass('Image-spinning')).toBe(true);
     });
     it('Test App has no image when it has no sudoku numbers and has a button', ()=>{
-        const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
+        const wrapper = shallow(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper.hasClass('Reload-button')).toBe(false);
-        expect(wrapper.find('button').first().hasClass('Reload-button')).toBe(true);
+        expect(wrapper.find('button').first().hasClass('Reload-button')).toBe(true); 
     });
-    it('Test click on a number', () => {
-        // const spy = sinon.spy(this.toogleNumber());
-        // let wrapper = mount(<App sudokuNumbers={sudokuSolved} />);
-        // const elem = wrapper.contains(SudokuElementComponent);
-        // expect(elem).toBe(true);
-        // wrapper.find(SudokuElementComponent).first().simulate('click');
-        // expect(spy.calledOnce).toBe(true);
-    })
+    it('Test click on a reload with sudoku numbers', () => {
+        const wrapper = shallow(<App sudokuNumbers={sudokuSolved} />); //
+        expect(wrapper.find('button').hasClass('Reload-button')).toBe(true);
+        expect(wrapper.state('loading')).toBe(false);
+        wrapper.find('button').simulate('click');
+        expect(wrapper.state('loading')).toBe(true);
+    });
 })

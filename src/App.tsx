@@ -6,7 +6,9 @@
 
 import * as React from 'react';
 import './css/App.css';
-import SudokuComponent from './components/Sudoku';
+import SudokuComponent from './components/SudokuComponent';
+// import GetSudoku from './services/GetSudoku';
+// import postNumber from './services/postNumber';
 import zenImage from './zenForLoading.png';
 
 interface ISudokuProps {
@@ -16,12 +18,12 @@ interface ISudokuProps {
 interface ISudokuState {
   currentSudokuNumbers: number[];
   loading: boolean;
+  selectedNumber: any;
 }
 
 class App extends React.Component<ISudokuProps, ISudokuState> {
   
     private static URL: string = 'http://127.0.0.1:8080/sudoku/board';
-    private selectedNumber: any;
     
     constructor (props: ISudokuProps){
         super(props);
@@ -29,8 +31,8 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
         this.state = {
           currentSudokuNumbers: props.sudokuNumbers,
           loading: props.sudokuNumbers.length ? false:true,
+          selectedNumber: 0,
         }
-        this.selectedNumber = 0;
         this.getSudoku();
     }
 
@@ -56,7 +58,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      */
     private bindingThis() {
         this.getSudoku = this.getSudoku.bind(this);
-        this.getSudoku = this.getSudoku.bind(this);
+        this.bindingThis = this.bindingThis.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.toggledNumber = this.toggledNumber.bind(this);
         this.postNumber = this.postNumber.bind(this);
@@ -69,7 +71,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      */
     private handleClick(e: React.MouseEvent<HTMLButtonElement>) {
         this.setState({loading:true});
-        if (this.selectedNumber !== 0) {
+        if (this.state.selectedNumber !== 0) {
             this.postNumber();
         }
         else {
@@ -83,7 +85,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @memberof App
      */
     private toggledNumber(element: any):void {
-        this.selectedNumber = element;
+        this.setState({selectedNumber:element});
     }
     /**
      * Fetch sudoku from the server and update state with its numbers
@@ -114,17 +116,18 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @memberof App
      */
     private postNumber():void {
-        console.log('The selected number is:',this.selectedNumber)
+        console.log('The selected number is:',this.state.selectedNumber)
         fetch(App.URL, {
             method: 'POST',
-            body: JSON.stringify(this.selectedNumber),
+            body: JSON.stringify(this.state.selectedNumber),
         })
         .then((res) => res.json())
         .then((resJson) => {
             console.log("POST response: ", resJson)
             this.setState({
                 currentSudokuNumbers:resJson.numbers,
-                loading: false
+                loading: false,
+                selectedNumber: 0
             })
         })
         .catch(res => (console.log('Error POST: ', res)))

@@ -3,8 +3,7 @@ import Enzyme, {shallow, render, mount} from 'enzyme';
 import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
-//import { expect } from 'chai';
-import SudokuElementComponent from '../components/SudokuElement';
+import SudokuElementComponent from '../components/SudokuElementComponent';
 
 //Set the default serializer for jest to be from enzyme-to-json
 //this produce a more easy to read serialized format
@@ -25,15 +24,4 @@ describe("Test suit for SudokuElementComponent", ()=>{
         );
         expect(wrapper).toMatchSnapshot();
     });
-    it('render correctly mount', () => {
-        const wrapper = mount(<SudokuElementComponent row={1} row={1} column={1} dataElement={2} toggledNumber={{number:2, row:1, column:1}}/>);
-        expect(wrapper).toMatchSnapshot();
-    });
-    it('On click it should return the right number', ()=>{
-        // const spy = sinon.spy();
-        // const wrapper = mount(<SudokuElementComponent row={1} row={1} colunm={1} dataElement={2} toggledNumber={{number:2, row:1, column:1}}/>);
-        // wrapper.simulate("click");
-        // expect(spy.calledOnce).toBe(true);
-    })
-    //TODO: It needs many more test!!
 })

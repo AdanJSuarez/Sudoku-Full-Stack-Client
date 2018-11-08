@@ -5,7 +5,7 @@
  */
 
 import * as React from 'react';
-import SudokuElementComponent from './SudokuElement';
+import SudokuElementComponent from './SudokuElementComponent';
 
 export interface ISudokuLineProps {
     row: number;

@@ -4,7 +4,7 @@
  * Full Stack Home-Project 
  */
 import * as React from 'react';
-import SudokuLineComponent from './SudokuLine';
+import SudokuLineComponent from './SudokuLineComponent';
 
 export interface ISudokuProps {
     sudokuNumbers: number[];

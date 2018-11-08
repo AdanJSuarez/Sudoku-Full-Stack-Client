@@ -1,10 +1,9 @@
 import React from 'react';
 import Enzyme, {shallow, render, mount} from 'enzyme';
-// import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
-//import { expect } from 'chai';
-import SudokuLineComponent from '../components/SudokuLine';
+import SudokuLineComponent from '../components/SudokuLineComponent';
+import SudokuElementComponent from '../components/SudokuElementComponent';
 
 //Set the default serializer for jest to be from enzyme-to-json
 //this produce a more easy to read serialized format
@@ -30,6 +29,10 @@ describe("Test suit for SudokuLineComponent", ()=>{
         const wrapper = mount(<SudokuLineComponent row={1} dataLine={dataLine} toggledNumber={{number:2, row:1, column:1}}/>);
         expect(wrapper).toMatchSnapshot();
     });
-    
-    //TODO: It needs many more test!!
+    it('Test number of Elements',()=>{
+        const wrapper = shallow(
+            <SudokuLineComponent row={1} dataLine={dataLine} toggledNumber={()=>{}} />
+        );
+        expect(wrapper.find('td')).toHaveLength(9);
+    })
 })
