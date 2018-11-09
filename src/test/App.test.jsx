@@ -73,7 +73,7 @@ describe("Test suit for App", ()=>{
         wrapper.find('button').simulate('click');
         expect(wrapper.state('loading')).toBe(true);
     });
-    it('Test it load a sudoku after first render', (done) => {
+    it('Test it loads a sudoku after first render', (done) => {
         const wrapper = shallow(<App sudokuNumbers={[]} />);
         const state = wrapper.instance().state;
         expect(state.loading).toBe(true);
@@ -83,5 +83,20 @@ describe("Test suit for App", ()=>{
             expect(wrapper.find('SudokuComponent').length).toBe(1);
             done();
         });
+    });
+    it('Test it loads a new sudoku after click on a number and click in reload',(done)=>{
+        const wrapper = mount(<App sudokuNumbers = {[]}/>);
+        setTimeout(()=>{
+            wrapper.update();
+            wrapper.find('button').at(1).simulate('click');
+            let state = wrapper.instance().state;
+            expect(state.selectedNumber).toEqual({row:1, column:1, number:2});
+            wrapper.find('button').first().simulate('click');
+            // wrapper.update();
+            state = wrapper.instance().state;
+            expect(state.currentSudokuNumbers[0]).toEqual(2);
+            done();
+        })
+        
     })
 })
