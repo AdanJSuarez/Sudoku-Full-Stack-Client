@@ -7,8 +7,8 @@
 import * as React from 'react';
 import './css/App.css';
 import SudokuComponent from './components/SudokuComponent';
-// import GetSudoku from './services/GetSudoku';
-// import postNumber from './services/postNumber';
+import GetSudoku from './services/GetSudoku';
+import PostNumber from './services/PostNumber';
 import zenImage from './zenForLoading.png';
 
 interface ISudokuProps {
@@ -32,10 +32,8 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
           currentSudokuNumbers: props.sudokuNumbers,
           loading: props.sudokuNumbers.length ? false:true,
           selectedNumber: 0,
-        }
-        this.getSudoku();
-    }
-
+        };
+    };
     public render() {
         // Conditional render to allow zenImage shows up
         return (!this.state.loading) ? (
@@ -52,17 +50,12 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
         )
     }
     /**
-     * Bind methods to 'this'
-     * @private
+     * Get sudoku numbers and updata state after component are mounted
      * @memberof App
      */
-    private bindingThis() {
-        this.getSudoku = this.getSudoku.bind(this);
-        this.bindingThis = this.bindingThis.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-        this.toggledNumber = this.toggledNumber.bind(this);
-        this.postNumber = this.postNumber.bind(this);
-    }
+    public componentDidMount(){
+        this.getSudoku();
+    };
     /**
      * Reaload a new sudoku after click
      * @private
@@ -92,21 +85,13 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @private
      * @memberof App
      */
-    private getSudoku():void {
-        fetch(App.URL, {
-                method: 'GET',
-        })
-        .then((res) => res.json())
-        .then((resJson) => {
-            this.setState({
-                currentSudokuNumbers: resJson.numbers,
-                loading: false,
-            });
-            console.log(resJson)
-        })
-        .catch((err)=>{
-            console.log("Error in fetch indicated down: ")
-            console.error(err);
+    private async getSudoku() {
+        let sudoku = new GetSudoku(App.URL);
+        let newStates = await sudoku.getSudoku();
+        this.setState({
+            currentSudokuNumbers: newStates.currentSudokuNumbers,
+            loading: newStates.loading,
+            selectedNumber: 0
         })
     }
     /**
@@ -115,22 +100,26 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @private
      * @memberof App
      */
-    private postNumber():void {
-        console.log('The selected number is:',this.state.selectedNumber)
-        fetch(App.URL, {
-            method: 'POST',
-            body: JSON.stringify(this.state.selectedNumber),
+    private async postNumber() {
+        let postedNumber = new PostNumber(this.state.selectedNumber, App.URL);
+        let newStates = await postedNumber.getPostedNumber();
+        this.setState({
+            currentSudokuNumbers: newStates.currentSudokuNumbers,
+            loading: newStates.loading,
+            selectedNumber: 0
         })
-        .then((res) => res.json())
-        .then((resJson) => {
-            console.log("POST response: ", resJson)
-            this.setState({
-                currentSudokuNumbers:resJson.numbers,
-                loading: false,
-                selectedNumber: 0
-            })
-        })
-        .catch(res => (console.log('Error POST: ', res)))
+    }
+    /**
+     * Bind methods to 'this'
+     * @private
+     * @memberof App
+     */
+    private bindingThis() {
+        this.getSudoku = this.getSudoku.bind(this);
+        this.bindingThis = this.bindingThis.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.toggledNumber = this.toggledNumber.bind(this);
+        this.postNumber = this.postNumber.bind(this);
     }
 }
 export default App;
