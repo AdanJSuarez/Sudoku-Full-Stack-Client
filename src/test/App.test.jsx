@@ -5,6 +5,7 @@ import App from '../App';
 import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer} from 'enzyme-to-json';
 import SudokuElementComponent from '../components/SudokuElementComponent';
+import { doesNotReject } from 'assert';
 //import { expect } from 'chai';
 // import SudokuComponent from '../components/Sudoku';
 
@@ -60,12 +61,6 @@ describe("Test suit for App", ()=>{
         const wrapper = shallow(<App sudokuNumbers={[]} />);
         expect(wrapper.find('img').hasClass('Image-spinning')).toBe(true);
     });
-    it('Test load number after first render', () => {
-        const wrapper = shallow(<App sudokuNumbers={[]} />);
-        expect(wrapper.find('img').hasClass('Image-spinning')).toBe(true);
-        wrapper.update();
-        expect(wrapper.find('img').hasClass('Image-spinning')).toBe(false);
-    })
     it('Test App has no image when it has no sudoku numbers and has a button', ()=>{
         const wrapper = shallow(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper.hasClass('Reload-button')).toBe(false);
@@ -78,4 +73,15 @@ describe("Test suit for App", ()=>{
         wrapper.find('button').simulate('click');
         expect(wrapper.state('loading')).toBe(true);
     });
+    it('Test it load a sudoku after first render', (done) => {
+        const wrapper = shallow(<App sudokuNumbers={[]} />);
+        const state = wrapper.instance().state;
+        expect(state.loading).toBe(true);
+        setTimeout(() => {
+            const state = wrapper.instance().state;
+            expect(state.loading).toEqual(false)
+            expect(wrapper.find('SudokuComponent').length).toBe(1);
+            done();
+        });
+    })
 })
