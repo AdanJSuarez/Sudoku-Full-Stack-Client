@@ -51,12 +51,10 @@ describe("Test suit for App", ()=>{
         const wrapper = mount(<App sudokuNumbers={[]}/>);
         expect(wrapper).toMatchSnapshot();
     });
-
     it('render correctly mount with numbers', () => {
         const wrapper = mount(<App sudokuNumbers={sudokuSolved}/>);
         expect(wrapper).toMatchSnapshot();
     });
-
     it('Test App has a image when it has no sudoku numbers', () => {
         const wrapper = shallow(<App sudokuNumbers={[]} />);
         expect(wrapper.find('img').hasClass('Image-spinning')).toBe(true);
@@ -85,18 +83,16 @@ describe("Test suit for App", ()=>{
         });
     });
     it('Test it loads a new sudoku after click on a number and click in reload',(done)=>{
-        const wrapper = mount(<App sudokuNumbers = {[]}/>);
+        const wrapper = mount(<App sudokuNumbers = {[sudokuSolved]}/>);
+        // Click first Element button to select the number
+        wrapper.find('button').at(1).simulate('click');
+        // Click reload button
+        wrapper.find('button').first().simulate('click');
         setTimeout(()=>{
-            wrapper.update();
-            wrapper.find('button').at(1).simulate('click');
-            let state = wrapper.instance().state;
-            expect(state.selectedNumber).toEqual({row:1, column:1, number:2});
-            wrapper.find('button').first().simulate('click');
-            // wrapper.update();
-            state = wrapper.instance().state;
-            expect(state.currentSudokuNumbers[0]).toEqual(2);
+            const state = wrapper.instance().state;
+            // We load a different number through PostNumber mock to check that it works
+            expect(state.currentSudokuNumbers[0]).toEqual(9);
             done();
         })
-        
     })
 })
