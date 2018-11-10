@@ -7,14 +7,14 @@
 export default class PostNumber {
 
     private url: string;
-    private selectedNumber: any;
+    private state: any;
     private sudoku: any;
 
-    constructor(selectedNumber: any, url: string){
+    constructor(state: any, url: string){
         this.bindingThis();
-        this.selectedNumber = selectedNumber;
+        this.state = state;
         this.url = url;
-        console.log('The selected number is:', selectedNumber)
+        console.log('The selected state is:', state)
         this.sudoku = this.postNumber();
     }
     // console.log('The selected number is:', selectedNumber)
@@ -24,7 +24,7 @@ export default class PostNumber {
     private async postNumber(){
         return await fetch(this.url, {
             method: 'POST',
-            body: JSON.stringify(this.selectedNumber),
+            body: JSON.stringify(this.state),
         })
         .then((res) => res.json())
         .then((resJson) => {

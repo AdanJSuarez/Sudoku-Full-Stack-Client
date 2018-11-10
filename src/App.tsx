@@ -101,7 +101,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
      * @memberof App
      */
     private async postNumber() {
-        let postedNumber = new PostNumber(this.state.selectedNumber, App.URL);
+        let postedNumber = new PostNumber(this.state, App.URL);
         let newStates = await postedNumber.getPostedNumber();
         this.setState({
             currentSudokuNumbers: newStates.currentSudokuNumbers,

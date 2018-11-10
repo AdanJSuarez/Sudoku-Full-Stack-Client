@@ -1,10 +1,9 @@
-
-
-/**
- * Class to facilitate testability (not in use)
- * @export
- * @class GetSudoku
+/** 
+ * Adan J. Suarez
+ * adanjsuarez@gmail.com
+ * Full Stack Home-Project 
  */
+
 export default class GetSudoku {
     
     private url: string;
