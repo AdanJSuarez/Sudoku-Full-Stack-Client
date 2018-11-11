@@ -79,3 +79,6 @@ all configuration is in this file.
 To run it just need to type: ./sudo docker run -p 80:80 sudoku-spa:level-4
 
 It need to have sudoku-ws running previously to show the numbers.
+
+To see it as only one application type this in a browser: http://localhost
+
