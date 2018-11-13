@@ -30,9 +30,10 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
         this.hundleClick = this.hundleClick.bind(this);
     }
     public render() {
-        return (
-            <button className={'Element'} onClick={this.hundleClick}> { this.state.currentDataElement } </button>
-        );
+        return this.state.toggleOn?
+        (<button className={'Element'} onClick={this.hundleClick}> { this.state.currentDataElement } </button>)
+        :
+        (<button className={'ElementSelected'} onClick={this.hundleClick}> { this.state.currentDataElement } </button>);
     }
     /**
      * Handle click bubbling up Json object selected with click
@@ -49,6 +50,7 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
             column: this.state.currentColumn
         }
         this.state.toggleOn? this.setState({ toggleOn: false }) : this.setState({ toggleOn: true })
+        // this.state.toggleOn? Element:ElementSelecte
         this.state.toggleOn? elementBubbleUp = emptyElement:elementBubbleUp = element;
         this.props.toggleNumber(elementBubbleUp);
     }

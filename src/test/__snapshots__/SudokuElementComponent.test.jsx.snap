@@ -2,7 +2,7 @@
 
 exports[`Test suit for SudokuElementComponent render correctly render 1`] = `
 <button
-  class="Element"
+  class="ElementSelected"
 >
    2 
 </button>
@@ -10,7 +10,7 @@ exports[`Test suit for SudokuElementComponent render correctly render 1`] = `
 
 exports[`Test suit for SudokuElementComponent render correctly shallow 1`] = `
 <button
-  className="Element"
+  className="ElementSelected"
   onClick={[Function]}
 >
    

@@ -14,7 +14,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -28,7 +28,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -42,7 +42,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -56,7 +56,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -70,7 +70,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -84,7 +84,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -98,7 +98,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -112,7 +112,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -126,7 +126,7 @@ exports[`Test suit for SudokuLineComponent render correctly mount 1`] = `
         >
            
           <button
-            className="Element"
+            className="ElementSelected"
             onClick={[Function]}
           >
              
@@ -155,7 +155,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              2 
           </button>
@@ -166,7 +166,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              5 
           </button>
@@ -177,7 +177,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              8 
           </button>
@@ -188,7 +188,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              7 
           </button>
@@ -199,7 +199,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              4 
           </button>
@@ -210,7 +210,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              3 
           </button>
@@ -221,7 +221,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              9 
           </button>
@@ -232,7 +232,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              6 
           </button>
@@ -243,7 +243,7 @@ exports[`Test suit for SudokuLineComponent render correctly render 1`] = `
         >
            
           <button
-            class="Element"
+            class="ElementSelected"
           >
              1 
           </button>
