@@ -24,4 +24,11 @@ describe("Test suit for SudokuElementComponent", ()=>{
         );
         expect(wrapper).toMatchSnapshot();
     });
+    it('Test states', ()=>{
+        const wrapper = shallow(<SudokuElementComponent  row={1} column={1} dataElement={2} toggledNumber={()=>{}} />);
+        const state = wrapper.instance().state;
+        expect(state.toggleOn).toBe(false);
+        // wrapper.simulate('click');
+        // expect(state.toggleOn).toBe(true);
+    })
 })

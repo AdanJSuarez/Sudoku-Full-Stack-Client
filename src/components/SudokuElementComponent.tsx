@@ -16,6 +16,7 @@ export interface SudokuElementState {
     currentRow: number;
     currentColumn: number;
     currentDataElement: number;
+    toggleOn: boolean;
 }
 export default class SudokuElementComponent extends React.Component<SudokuElementProps, SudokuElementState> {
     constructor(props: SudokuElementProps) {
@@ -24,6 +25,7 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
             currentRow: props.row,
             currentColumn: props.column,
             currentDataElement: props.dataElement,
+            toggleOn: false
         };
         this.hundleClick = this.hundleClick.bind(this);
     }
@@ -39,11 +41,15 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
      * @memberof SudokuElementComponent
      */
     private hundleClick(e: React.MouseEvent<HTMLButtonElement>){
+        let emptyElement = {};
+        let elementBubbleUp: any;
         let element = {
             number: this.state.currentDataElement,
             row: this.state.currentRow,
             column: this.state.currentColumn
         }
-        this.props.toggleNumber(element);
+        this.state.toggleOn? this.setState({ toggleOn: false }) : this.setState({ toggleOn: true })
+        this.state.toggleOn? elementBubbleUp = emptyElement:elementBubbleUp = element;
+        this.props.toggleNumber(elementBubbleUp);
     }
 }
