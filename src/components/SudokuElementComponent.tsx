@@ -50,7 +50,6 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
             column: this.state.currentColumn
         }
         this.state.toggleOn? this.setState({ toggleOn: false }) : this.setState({ toggleOn: true })
-        // this.state.toggleOn? Element:ElementSelecte
         this.state.toggleOn? elementBubbleUp = emptyElement:elementBubbleUp = element;
         this.props.toggleNumber(elementBubbleUp);
     }
