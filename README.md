@@ -1,5 +1,4 @@
 # Sudoku-Full-Stack Client
-Coding problem to cover different aspect of full stack
 This part is specifically for front-end.
 
 It is better begins for Sudoku-Full-Stack-Server (it is the other repository).
