@@ -11,7 +11,7 @@
     height: 70px;
     opacity: 0.6;
     animation: zen-spinning infinite 500ms linear;
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 925px;
     
@@ -42,6 +42,9 @@
 }
 #Reload-button:hover {
     background-color: brown;
+}
+#Loading {
+    text-align: center;
 }
 #sudoku-component {
     position: relative;

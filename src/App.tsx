@@ -52,6 +52,7 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
             </div>
                 <h2 className ='Name'>SUDOKU</h2> 
                 <img id='Image-spinning' src = {zenImage} alt="Spinning image"/>
+                <h4 id="Loading">If it takes to long to load: The server is down.</h4>
             </div>
         )
     }
