@@ -2,7 +2,7 @@
 
 exports[`Test suit for SudokuComponent render correctly mount 1`] = `
 <div
-  className="sudoku-numbers"
+  id="sudoku-component"
 >
   <div
     className="Table-Line"
@@ -1251,7 +1251,7 @@ exports[`Test suit for SudokuComponent render correctly mount 1`] = `
 
 exports[`Test suit for SudokuComponent render correctly render 1`] = `
 <div
-  class="sudoku-numbers"
+  id="sudoku-component"
 >
   <div
     class="Table-Line"
@@ -2257,7 +2257,7 @@ exports[`Test suit for SudokuComponent render correctly render 1`] = `
 
 exports[`Test suit for SudokuComponent render correctly shallow 1`] = `
 <div
-  className="sudoku-numbers"
+  id="sudoku-component"
 >
   <SudokuLineComponent
     dataLine={

@@ -4,19 +4,28 @@ exports[`Test suit for App render correctly mount with numbers 1`] = `
 <div
   className="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     className="Name"
   >
     SUDOKU
   </h2>
   <button
-    className="Reload-button"
+    id="Reload-button"
     onClick={[Function]}
   >
      Reload 
   </button>
   <div
-    className="sudoku-numbers"
+    id="sudoku-component"
   >
     <div
       className="Table-Line"
@@ -1268,6 +1277,15 @@ exports[`Test suit for App render correctly mount without numbers 1`] = `
 <div
   className="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     className="Name"
   >
@@ -1275,8 +1293,13 @@ exports[`Test suit for App render correctly mount without numbers 1`] = `
   </h2>
   <img
     alt="Spinning image"
-    className="Image-spinning"
+    id="Image-spinning"
   />
+  <h4
+    id="Loading"
+  >
+    If it takes to long to load: The server is down.
+  </h4>
 </div>
 `;
 
@@ -1284,18 +1307,27 @@ exports[`Test suit for App render correctly render with numbers 1`] = `
 <div
   class="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     class="Name"
   >
     SUDOKU
   </h2>
   <button
-    class="Reload-button"
+    id="Reload-button"
   >
      Reload 
   </button>
   <div
-    class="sudoku-numbers"
+    id="sudoku-component"
   >
     <div
       class="Table-Line"
@@ -2304,6 +2336,15 @@ exports[`Test suit for App render correctly render without numbers 1`] = `
 <div
   class="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     class="Name"
   >
@@ -2311,10 +2352,15 @@ exports[`Test suit for App render correctly render without numbers 1`] = `
   </h2>
   <img
     alt="Spinning image"
-    class="Image-spinning"
+    id="Image-spinning"
   >
     
   </img>
+  <h4
+    id="Loading"
+  >
+    If it takes to long to load: The server is down.
+  </h4>
 </div>
 `;
 
@@ -2322,13 +2368,22 @@ exports[`Test suit for App render correctly shallow with numbers 1`] = `
 <div
   className="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     className="Name"
   >
     SUDOKU
   </h2>
   <button
-    className="Reload-button"
+    id="Reload-button"
     onClick={[Function]}
   >
      Reload 
@@ -2428,6 +2483,15 @@ exports[`Test suit for App render correctly shallow without numbers 1`] = `
 <div
   className="App-div"
 >
+  <div
+    id="div-Header"
+  >
+    <h1
+      id="Title"
+    >
+      BOARD GAME
+    </h1>
+  </div>
   <h2
     className="Name"
   >
@@ -2435,7 +2499,12 @@ exports[`Test suit for App render correctly shallow without numbers 1`] = `
   </h2>
   <img
     alt="Spinning image"
-    className="Image-spinning"
+    id="Image-spinning"
   />
+  <h4
+    id="Loading"
+  >
+    If it takes to long to load: The server is down.
+  </h4>
 </div>
 `;
