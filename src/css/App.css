@@ -4,10 +4,17 @@
  * Full Stack Home-Project 
  */
 
-.Image-spinning {
-    height: 39px;
+.App-div {
+    font: sans-serif;
+}
+#Image-spinning {
+    height: 70px;
     opacity: 0.6;
     animation: zen-spinning infinite 500ms linear;
+    position: absolute;
+    top: 30%;
+    left: 925px;
+    
 }
 @keyframes zen-spinning {
     from { transform: rotate(0deg); }
@@ -17,9 +24,29 @@
     font: 'arial';
     font-size: 40px;
     color: black;
+    text-align: center;
 }
-.Reload-button{
+#Reload-button {
     font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: 0%;
+    left: 46.5%;
+
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    display: inline-block;
+}
+#Reload-button:hover {
+    background-color: brown;
+}
+#sudoku-component {
+    position: relative;
+    top: 25px;
+    left: 38%;
 }
 .Table {
     /* display: inline-block; */
@@ -62,4 +89,16 @@
 }
 .ElementSelected:hover{
     background-color:orange;
+}
+#div-Header {
+    height: 100px;
+    position: relative;
+    text-align: center;
+    line-height: 6em;
+
+    color: white;
+    background-color: darkslategray;
+}
+#Title {
+    height: 50px;
 }

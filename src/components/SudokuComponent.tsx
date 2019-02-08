@@ -41,7 +41,7 @@ export default class SudokuComponent extends React.Component<ISudokuProps, ISudo
     }
     public render() {
         return  (
-            <div className="sudoku-numbers">
+            <div id="sudoku-component">
                 { <SudokuLineComponent row={1} dataLine={this.state.dataLine1} toggledNumber={this.toggleNumber}/> }
                 { <SudokuLineComponent row={2} dataLine={this.state.dataLine2} toggledNumber={this.toggleNumber}/> }    
                 { <SudokuLineComponent row={3} dataLine={this.state.dataLine3} toggledNumber={this.toggleNumber}/> }    

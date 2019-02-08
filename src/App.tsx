@@ -38,14 +38,20 @@ class App extends React.Component<ISudokuProps, ISudokuState> {
         // Conditional render to allow zenImage shows up
         return (!this.state.loading) ? (
             <div className='App-div'>
+            <div id='div-Header'>
+                <h1 id="Title">BOARD GAME</h1>
+            </div>
                 <h2 className ='Name'>SUDOKU</h2> 
-                <button className='Reload-button' onClick={ this.handleClick }> Reload </button> 
+                <button id='Reload-button' onClick={ this.handleClick }> Reload </button> 
                 <SudokuComponent sudokuNumbers={this.state.currentSudokuNumbers} toggledNumber={this.toggledNumber} />
             </div>
         ) : (
             <div className='App-div'>
+            <div id='div-Header'>
+                <h1 id="Title">BOARD GAME</h1>
+            </div>
                 <h2 className ='Name'>SUDOKU</h2> 
-                <img src = {zenImage} className='Image-spinning' alt="Spinning image"/>
+                <img id='Image-spinning' src = {zenImage} alt="Spinning image"/>
             </div>
         )
     }
