@@ -49,7 +49,7 @@
 #sudoku-component {
     position: relative;
     top: 25px;
-    left: 38%;
+    left: 35%;
 }
 .Table {
     /* display: inline-block; */
@@ -85,6 +85,7 @@
 .ElementSelected {
     pointer-events: auto;
     font-size: 30px;
+    text-align: center;
     border: 2px solid grey;
     background-color: white;
     width: 50px;
@@ -103,5 +104,33 @@
     background-color: darkslategray;
 }
 #Title {
+    height: 50px;
+}
+.div-numbers {
+    width:50px;
+    float:right;
+    position: relative;
+    top: 25px;
+    right: 35%;
+}
+.Element-to-select {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    font-style: bold;
+    background-color:wheat ;
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid grey;
+}
+/* .Element-to-select:hover {
+    background-color: orange;
+} */
+.Element-to-select:focus {
+    pointer-events: auto;
+    font-size: 30px;
+    border: 2px solid grey;
+    background-color: grey;
+    width: 50px;
     height: 50px;
 }
