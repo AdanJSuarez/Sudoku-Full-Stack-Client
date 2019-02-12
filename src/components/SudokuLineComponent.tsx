@@ -16,15 +16,15 @@ export interface ISudokuLineProps {
 export interface ISudokuLineState {
     currentRow  : number;
     currentToggleNumbers: any[];
-    currentDataElement1: number;
-    currentDataElement2: number;
-    currentDataElement3: number;
-    currentDataElement4: number;
-    currentDataElement5: number;
-    currentDataElement6: number;
-    currentDataElement7: number;
-    currentDataElement8: number;
-    currentDataElement9: number;
+    currentDataElement1: number | string;
+    currentDataElement2: number | string;
+    currentDataElement3: number | string;
+    currentDataElement4: number | string;
+    currentDataElement5: number | string;
+    currentDataElement6: number | string;
+    currentDataElement7: number | string;
+    currentDataElement8: number | string;
+    currentDataElement9: number | string;
 }
 
 export default class SudokuLineComponent extends React.Component<ISudokuLineProps, ISudokuLineState> {
@@ -52,20 +52,50 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
                 <table className='Table'>
                 <tbody>
                     <tr>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={1} dataElement={this.state.currentDataElement1} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={2} dataElement={this.state.currentDataElement2} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={3} dataElement={this.state.currentDataElement3} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={4} dataElement={this.state.currentDataElement4} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={5} dataElement={this.state.currentDataElement5} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={6} dataElement={this.state.currentDataElement6} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={7} dataElement={this.state.currentDataElement7} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={8} dataElement={this.state.currentDataElement8} toggleNumber={this.toggleNumber}/> } </td>
-                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={9} dataElement={this.state.currentDataElement9} toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={1} dataElement={
+                            this.state.currentDataElement1
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={2} dataElement={
+                            this.state.currentDataElement2
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={3} dataElement={
+                            this.state.currentDataElement3
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={4} dataElement={
+                            this.state.currentDataElement4
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={5} dataElement={
+                            this.state.currentDataElement5
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={6} dataElement={
+                            this.state.currentDataElement6
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={7} dataElement={
+                            this.state.currentDataElement7
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={8} dataElement={
+                            this.state.currentDataElement8
+                            } toggleNumber={this.toggleNumber}/> } </td>
+                        <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={9} dataElement={
+                            this.state.currentDataElement9
+                            } toggleNumber={this.toggleNumber}/> } </td>
                     </tr>
                 </tbody>
                 </table>
             </div>
         );
+    }
+    /**
+     * Action before initial render. Hide numbers.
+     *
+     * @memberof SudokuLineComponent
+     */
+    public componentWillMount() {
+        let hidenElements: number[] = this.selectHideElements();
+            for (let i of hidenElements) {
+                const element: string = "currentDataElement" + i.toString();
+                this.state[element] = " ";
+            }
     }
     /**
      *Take the Json object bubbled up
@@ -74,5 +104,21 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
      */
     public toggleNumber(element: any) {
       this.props.toggledNumber(element);
+    }
+    /**
+     * Return a list of column to be hide.
+     *
+     * @private
+     * @param {number} [max=4]
+     * @returns {number[]}
+     * @memberof SudokuLineComponent
+     */
+    private selectHideElements(max: number = 4): number[] {
+        let result: number[] = [];
+        for (let i = 0; i < max; i++) {
+            let num: number = Math.floor(Math.random() * 9) + 1;
+            result.push(num);
+        }
+        return result;
     }
 }

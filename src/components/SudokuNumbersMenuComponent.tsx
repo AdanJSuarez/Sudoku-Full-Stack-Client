@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface SNMenuProps {
-    numberX: number;
+    numberX: any;
 }
 
 export interface SNMenuState {
@@ -30,7 +30,15 @@ export default class AppComponent extends React.Component<SNMenuProps, SNMenuSta
             </div>
         );
     }
+    /**
+     * Select number to fill in sudoku board.
+     *
+     * @private
+     * @param {React.MouseEvent<HTMLButtonElement>} e
+     * @memberof AppComponent
+     */
     private hundleClick(e:React.MouseEvent<HTMLButtonElement>): void {
-
+        console.log(this.props.children);
+        // this.props.numberX()
     }
 }
