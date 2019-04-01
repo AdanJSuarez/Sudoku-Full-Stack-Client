@@ -43,14 +43,15 @@ export default class SudokuElementComponent extends React.Component<SudokuElemen
      */
     private hundleClick(e: React.MouseEvent<HTMLButtonElement>){
         let emptyElement = {};
-        let elementBubbleUp: any;
+        // let elementBubbleUp: any;
         let element = {
             number: this.state.currentDataElement,
             row: this.state.currentRow,
             column: this.state.currentColumn
         }
         this.state.toggleOn? this.setState({ toggleOn: false }) : this.setState({ toggleOn: true })
-        this.state.toggleOn? elementBubbleUp = emptyElement : elementBubbleUp = element;
-        this.props.toggleNumber(elementBubbleUp);
+        // this.state.toggleOn? elementBubbleUp = emptyElement : elementBubbleUp = element;
+        // this.props.toggleNumber(elementBubbleUp);
+        this.setState({currentDataElement: this.props.toggleNumber})
     }
 }

@@ -107,15 +107,15 @@
     height: 50px;
 }
 .div-numbers {
-    width:50px;
-    float:right;
+    /* width:50px; */
+    float: left;
     position: relative;
     top: 25px;
-    right: 35%;
+    left: 34.6%;
 }
 .Element-to-select {
     height: 50px;
-    width: 50px;
+    width: 52px;
     font-size: 30px;
     font-style: bold;
     background-color:wheat ;
@@ -133,4 +133,10 @@
     background-color: grey;
     width: 50px;
     height: 50px;
+}
+.Division-between-lines {
+    height: 2px;
+}
+.Division-horizontal {
+    width: 2px;
 }

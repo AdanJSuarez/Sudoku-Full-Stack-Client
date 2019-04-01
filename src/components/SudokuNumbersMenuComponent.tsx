@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 export interface SNMenuProps {
-    numberX: any;
+    numberSelected: any;
 }
 
-export interface SNMenuState {
-    selectedNumber: number;
-}
+// export interface SNMenuState {
+//     selectedNumber: number;
+// }
 
-export default class AppComponent extends React.Component<SNMenuProps, SNMenuState> {
+export default class AppComponent extends React.Component<SNMenuProps> {
     constructor(props: SNMenuProps) {
         super(props);
         this.state = {
@@ -38,7 +38,7 @@ export default class AppComponent extends React.Component<SNMenuProps, SNMenuSta
      * @memberof AppComponent
      */
     private hundleClick(e:React.MouseEvent<HTMLButtonElement>): void {
-        console.log(this.props.children);
-        // this.props.numberX()
+        const selectedElement: number = Number(e.currentTarget.innerText);
+        this.props.numberSelected(selectedElement);
     }
 }

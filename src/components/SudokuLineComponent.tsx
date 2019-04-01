@@ -61,6 +61,7 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
                         <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={3} dataElement={
                             this.state.currentDataElement3
                             } toggleNumber={this.toggleNumber}/> } </td>
+                        <td></td>
                         <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={4} dataElement={
                             this.state.currentDataElement4
                             } toggleNumber={this.toggleNumber}/> } </td>
@@ -70,6 +71,7 @@ export default class SudokuLineComponent extends React.Component<ISudokuLineProp
                         <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={6} dataElement={
                             this.state.currentDataElement6
                             } toggleNumber={this.toggleNumber}/> } </td>
+                        <td></td>
                         <td className= 'td'> { <SudokuElementComponent row={this.props.row} column={7} dataElement={
                             this.state.currentDataElement7
                             } toggleNumber={this.toggleNumber}/> } </td>
